@@ -1,0 +1,61 @@
+/* Estilos gerais */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff; 
+}
+
+/* Estilos do formulário */
+form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+/* Labels e inputs */
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 3px;  
+
+    box-sizing: border-box;
+}
+
+/* Botão de envio */
+button[type="submit"] {
+    background-color: #007bff; 
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+/* Hover no botão */
+button[type="submit"]:hover {
+    background-color: #0069d9; 
+}
+
+.mensagem-sucesso {
+    background-color: #dff0d8;
+    border: 1px solid #d6e9c6;
+    color: #3c763d;
+    padding: 10px;
+  }
+  
+  .mensagem-erro {
+    background-color: #f2dede;
+    border: 1px solid #ebccd1;
+    color: #a94442;
+    padding: 10px;
+  }
