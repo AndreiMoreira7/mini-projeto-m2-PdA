@@ -5,28 +5,42 @@
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    <form id="formCadastro" action="processar_dados.php" method="post">
-        <label for="nome">Nome completo:</label>
-        <input type="text" id="nome" name="nome" required>
-
-        <label for="idade">Idade:</label>
-        <input type="number" id="idade" name="idade"  
- min="18" required>
-
-        <label for="dataNascimento">Data de nascimento:</label>
-        <input type="date" id="dataNascimento" name="dataNascimento" required>
-
-        <label for="email">Email:</label> 
-
-        <input type="email" id="email" name="email" required>
-
-        <button type="submit">Enviar</button>
-    </form>
-    
-    <div id="mensagem"></div>
-
-
-    <script src="index.js"></script>
+    <div class="container">
+        <div class="logo">
+          <img src="/img/logoagoravai.png" alt="" />
+          <h2>Consulta Médica</h2>
+        </div>
+  
+        <form id="consulta-form">
+          <input type="text" id="nome" placeholder="Nome do paciente" required />
+          <input
+            type="date"
+            id="nascimento"
+            placeholder="Data de nascimento"
+            required
+          />
+          <input type="text" id="Espeacialidade" placeholder="Especialidade da Consulta" required />
+          <input
+            type="number"
+            id="Documento"
+            placeholder="RG ou CPF"
+            min="0"
+            required
+          />
+  
+          <textarea
+            id="descricao"
+            placeholder="O(a) paciente possui alguma dificuldade de locomoção? Tem dificuldades ao subir escadas ou é PCD (pessoa com deficiência)?"
+            rows="3"
+            required
+          ></textarea>
+          <button type="submit">Agendar Consulta</button>
+        </form>
+  
+        <ul id="consulta-list" class="consulta-list"></ul>
+      </div>
+  
+  <script src="index.js"></script>
 
 </body>
 </html>

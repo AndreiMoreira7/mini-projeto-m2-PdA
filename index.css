@@ -1,61 +1,130 @@
-/* Estilos gerais */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f8ff; 
-}
-
-/* Estilos do formulário */
-form {
-    max-width: 400px;
-    margin: 0 auto;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #fff;
-}
-
-/* Labels e inputs */
-label {
-    display: block;
-    margin-bottom: 5px;
-    color: #333;
-}
-
-input {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 3px;  
-
+* {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
-}
-
-/* Botão de envio */
-button[type="submit"] {
-    background-color: #007bff; 
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 3px;
-    cursor: pointer;
-}
-
-/* Hover no botão */
-button[type="submit"]:hover {
-    background-color: #0069d9; 
-}
-
-.mensagem-sucesso {
-    background-color: #dff0d8;
-    border: 1px solid #d6e9c6;
-    color: #3c763d;
-    padding: 10px;
   }
   
-  .mensagem-erro {
-    background-color: #f2dede;
-    border: 1px solid #ebccd1;
-    color: #a94442;
-    padding: 10px;
+  body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #ffffff;
   }
+  
+  .container {
+    background: #feffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 400px;
+    transition: box-shadow 1s ease-in-out; /* Aplica transição ao box-shadow */
+    box-shadow: none;
+  }
+  .container:hover {
+    box-shadow: 0 20px 20px rgba(46, 146, 212, 0.657);
+  }
+  
+  .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  h2 {
+    text-align: center;
+    padding-bottom: 15px;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  form input,
+  form textarea,
+  form button {
+    padding: 10px;
+    font-size: 16px;
+  }
+  
+  form button {
+    background-color: #3c87c5;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  form button:hover {
+    background-color: #2db5df;
+  }
+  
+  .consulta-list {
+    list-style-type: none;
+    margin-top: 20px;
+  }
+  
+  .consulta-item {
+    background: #fafafa;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: box-shadow ease-in-out 1s;
+  }
+  
+  .consulta-details {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    max-width: 300px;
+    font-family: "Times New Roman", Times, serif;
+  }
+  
+  .consulta-actions button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-left: 5px;
+  }
+  
+  .consulta-actions button.edit {
+    color: #ffa500;
+    padding: 4px;
+    border-radius: 2px;
+    background-color: #34393aa4;
+  }
+  
+  .consulta-actions button.delete {
+    color: #ee1e1e;
+    padding: 4px;
+    border-radius: 2px;
+    background-color: #34393aa4;
+  }
+  /* Efeito de hover na lista */
+  .consulta-item:hover {
+    box-shadow: 0 20px 20px rgba(36, 61, 184, 0.657);
+  }
+  
+  @media screen and (max-width: 600px) {
+    .container {
+      max-width: 300px;
+    }
+  
+    form {
+      gap: 18px;
+    }
+  
+    .consulta-details {
+      max-width: 170px;
+    }
+  }
+  
