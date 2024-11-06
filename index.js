@@ -22,6 +22,7 @@ class ConsultaController {
     this.inicializarAutocomplete();
   }
 
+
   adicionarConsulta(event) {
     event.preventDefault();
 
@@ -48,12 +49,12 @@ class ConsultaController {
       li.innerHTML = `
                 <div class="consulta-details">
                     <strong>${consulta.nome}</strong>
-                    <p>Email: ${consulta.nascimento}</p>
-                    <p>Área: ${consulta.especialidade}</p>
-                    <p>Membros: ${consulta.documento}</p>
+                    <p>nascimento: ${consulta.nascimento}</p>
+                    <p>especialidade: ${consulta.especialidade}</p>
+                    <p>documento: ${consulta.documento}</p>
                     <p>${consulta.descricao}</p>
                 </div>
-                <div class="empresa-actions">
+                <div class="consulta-actions">
                     <button class="edit" onclick="consultaController.editarconsulta(${index})">Editar</button>
                     <button class="delete" onclick="consultaController.deletarconsulta(${index})">Excluir</button>
                 </div>
@@ -79,3 +80,7 @@ class ConsultaController {
     this.consultas.splice(index, 1);
     this.atualizarLista();
   }
+}
+ 
+
+    
